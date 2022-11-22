@@ -1,0 +1,278 @@
+/* all the HEADER CSS */
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
+    background-color: #090b13;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 36px;
+    letter-spacing: 16px;
+    z-index: 3;
+}
+
+.logo{
+    padding: 0;
+    width: 80px;
+    margin-top: 4px;
+    max-height: 70px;
+    font-size: 0;
+    display: inline-block;
+}
+
+.Navbar{
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 100%;
+    justify-content: flex-end;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    margin-right: auto;
+    margin-left: 25px;
+}
+
+a{
+    display: flex;
+    align-items: center;
+    padding: 0 12px;
+}
+
+img{
+    height: 20px;
+    min-width: 20px;
+    width: 20px;
+}
+
+span{
+  color: rgb(249, 249, 249);  
+  font-size: 13px;
+  letter-spacing: 1.42px;
+  line-height: 1.08;
+  padding: 2px 0px;
+  white-space: nowrap;
+  position: relative;
+}
+
+a:before{
+    background-color: rgb(249, 249, 249);
+    border-radius: 0px 0px 4px 4px;
+    bottom: -6px;
+    content: "";
+    height: 2px;
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    transform-origin: left center;
+    transform: scaleX(0);
+    transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+    visibility: hidden;
+}
+
+a:hover {
+    transform: scaleX(1);
+    visibility: visible;
+    opacity: 1 !important;
+}
+
+.Login {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 8px 16px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 1px solid #f9f9f9;
+    border-radius: 4px;
+    transition: all 0.2s ease 0s;
+}
+
+.d:hover{
+    background-color: #f9f9f9;
+    color: black;
+    cursor: pointer;
+}
+
+
+/* All the Home css */
+
+.container {
+    position: relative;
+    background-image: url("/images/home-background.png");
+    min-height: calc(100vh - 250px);
+    overflow-x: hidden;
+    display: block;
+    top: 72px;
+    padding: 0 calc(3.5vw + 5px);
+  }
+  
+  .container:after {
+    background: url("/images/home-background.png") center center / cover no-repeat
+      fixed;
+      content: "";
+      position: absolute;
+      inset: 0px;
+      opacity: 1;
+      z-index: -1;
+  }
+  
+  .slider{
+    margin-top: 20px;
+    opacity: 0;
+    height: 100%;
+    width: 5xw;
+    z-index: 1;
+    transition: opacity 0.2s ease 0s;
+  
+  }
+
+  /* All the Login css */
+
+  .bgImg{
+    height: 100%;
+    background-position:top;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-image: url(public\\images\\login-background.jpg);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.Container{
+    overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  height: 100vh;
+}
+
+.Content{
+ margin-bottom: 10vw;
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 80px 40px;
+  height: 100%;
+}
+
+p{
+  color: hsla(0 , 0%, 95%, 1);
+  font-size: 11px;
+  margin: 0 0 24px;
+  line-height: 1.5px;
+  letter-spacing: 1.5px;
+}
+
+.CTALogo{
+    margin-bottom: 12px;
+    max-width: 600px;
+    min-height: 1px;
+    display: block;
+    width: 100%;
+}
+
+.CTA{
+  max-width: 650px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* margin-bottom: 2vw;
+  max-width: 650px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 0;
+  margin-right: auto;
+  margin-left: auto;
+  transition-timing-function: ease-out;
+  transition: opacity 0.2s;
+  width: 100%; */
+}
+
+a{
+  font-weight: bold;
+  color: #f9f9f9;
+  background-color: #0063e5;
+  margin-bottom: 12px;
+  width: 100%;
+  letter-spacing: 1.5px;
+  font-size: 18px;
+  padding: 16px 0;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  transition: 300ms ease;
+
+  background-color: #0483ee;
+  cursor: pointer;
+}
+
+.logo2{
+  max-width: 600px;
+  margin-bottom: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+/* Viewers css */
+
+.Container{
+    margin-top: 30px;
+    padding: 30px 0px 26px;
+    display: grid;
+    grid-gap: 25px;
+    gap: 25px;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+
+    @media (max-width: 768px) {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+      }
+}
+
+.Wrap{
+    padding-top: 56.25% ;
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
+    rgb(0 0 0 / 73%) 0px 16px 10px -10px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+    border: 3px solid rgba(249, 249, 249, 0.1);
+}
+
+img{
+    inset: 0px;
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    opacity: 1;
+    position: absolute;
+    transition: opacity 500ms ease-in-out 0s;
+}
+
+/* REecommedns */
+
+.Content{
+    display: grid;
+     grid-gap: 25px;
+    gap: 25px;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    @media (max-width: 768px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
